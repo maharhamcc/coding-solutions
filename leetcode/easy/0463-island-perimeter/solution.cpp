@@ -38,7 +38,10 @@ public:
             for(int j=0;j<m;j++)
             {
                 if(!vis[i][j] && grid[i][j]==1)
-                dfs(i,j,grid);
+                { 
+                    dfs(i,j,grid);
+                    break;
+                }
             }
         }
         return count;
