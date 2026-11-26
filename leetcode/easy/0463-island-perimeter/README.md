@@ -52,9 +52,9 @@ Output: 4
 ## Solution
 
 **Language:** C++  
-**Runtime:** 18 ms (beats 16.59%)  
-**Memory:** 104.2 MB (beats 18.82%)  
-**Submitted:** 2026-11-26T14:11:21.874Z  
+**Runtime:** 15 ms (beats 19.58%)  
+**Memory:** 104.1 MB (beats 19.00%)  
+**Submitted:** 2026-11-26T14:12:03.194Z  
 
 ```cpp
 class Solution {
@@ -97,7 +97,10 @@ public:
             for(int j=0;j<m;j++)
             {
                 if(!vis[i][j] && grid[i][j]==1)
-                dfs(i,j,grid);
+                { 
+                    dfs(i,j,grid);
+                    break;
+                }
             }
         }
         return count;
