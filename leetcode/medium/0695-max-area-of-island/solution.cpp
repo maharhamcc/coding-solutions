@@ -16,7 +16,6 @@ public:
     void dfs(int si,int sj,vector<vector<int>>& grid)           //& soho pathate hbe 
     {
         area++;
-        max_area=max({max_area,area});
         vis[si][sj]=true;
         for(int i=0;i<4;i++)
         {
@@ -43,6 +42,7 @@ public:
                 {
                     area=0;
                     dfs(i,j,grid);
+                    max_area=max({max_area,area});
                 }
             }
         }
