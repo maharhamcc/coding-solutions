@@ -43,9 +43,9 @@ Output: 0
 ## Solution
 
 **Language:** C++  
-**Runtime:** 4 ms (beats 41.28%)  
-**Memory:** 29.9 MB (beats 24.21%)  
-**Submitted:** 2026-11-27T05:28:52.248Z  
+**Runtime:** 1 ms (beats 78.57%)  
+**Memory:** 28.7 MB (beats 30.58%)  
+**Submitted:** 2026-11-27T05:33:35.250Z  
 
 ```cpp
 class Solution {
@@ -66,7 +66,6 @@ public:
     void dfs(int si,int sj,vector<vector<int>>& grid)           //& soho pathate hbe 
     {
         area++;
-        max_area=max({max_area,area});
         vis[si][sj]=true;
         for(int i=0;i<4;i++)
         {
@@ -93,6 +92,7 @@ public:
                 {
                     area=0;
                     dfs(i,j,grid);
+                    max_area=max({max_area,area});
                 }
             }
         }
